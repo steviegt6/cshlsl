@@ -17,6 +17,8 @@
 
         <!--suppress CheckTagEmptyBody -->
         <RootNamespace></RootNamespace>
+        
+        <NoWarn>$(NoWarn);CS0626;CS0824</NoWarn>
     </PropertyGroup>
 
     <ItemGroup>
