@@ -18,6 +18,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <Compile Include="IVector1.cs" />
       <Compile Include="System\Attribute.cs" />
       <Compile Include="System\AttributeTargets.cs" />
       <Compile Include="System\AttributeUsageAttribute.cs" />
@@ -28,6 +29,8 @@
       <Compile Include="System\Half.cs" />
       <Compile Include="System\Int32.cs" />
       <Compile Include="System\IScalar.cs" />
+      <Compile Include="System\ISwizzle.cs" />
+      <Compile Include="System\IVector.cs" />
       <Compile Include="System\Object.cs" />
       <Compile Include="System\Reflection\AssemblyCompanyAttribute.cs" />
       <Compile Include="System\Reflection\AssemblyConfigurationAttribute.cs" />
@@ -38,6 +41,10 @@
       <Compile Include="System\Reflection\AssemblyVersionAttribute.cs" />
       <Compile Include="System\Runtime\Versioning\TargetFrameworkAttribute.cs" />
       <Compile Include="System\String.cs" />
+      <Compile Include="System\Swizzle1.cs" />
+      <Compile Include="System\Swizzle2.cs" />
+      <Compile Include="System\Swizzle3.cs" />
+      <Compile Include="System\Swizzle4.cs" />
       <Compile Include="System\UInt32.cs" />
       <Compile Include="System\Usings.cs" />
       <Compile Include="System\ValueType.cs" />
