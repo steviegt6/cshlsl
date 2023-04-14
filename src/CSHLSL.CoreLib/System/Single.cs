@@ -3,4 +3,4 @@
 /// <summary>
 ///     32-bit floating point value.
 /// </summary>
-public struct Float : IScalar { }
+public struct Single : IScalar { }

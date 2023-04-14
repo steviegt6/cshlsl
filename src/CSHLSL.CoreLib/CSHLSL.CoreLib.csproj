@@ -25,7 +25,7 @@
       <Compile Include="System\Boolean.cs" />
       <Compile Include="System\Double.cs" />
       <Compile Include="System\Enum.cs" />
-      <Compile Include="System\Float.cs" />
+      <Compile Include="System\Single.cs" />
       <Compile Include="System\Half.cs" />
       <Compile Include="System\Int32.cs" />
       <Compile Include="System\IScalar.cs" />
