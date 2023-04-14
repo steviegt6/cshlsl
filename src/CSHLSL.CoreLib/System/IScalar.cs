@@ -1,6 +1,7 @@
 ﻿namespace System;
 
 // TODO: Define minimum-precision scalar data types.
+// TODO: snorm/unorm scalar data types.
 /// <summary>
 ///     Indicates that the type is a scalar.
 ///     <br />
