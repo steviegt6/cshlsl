@@ -1,4 +1,4 @@
-﻿namespace System; 
+﻿namespace System;
 
 /// <summary>
 ///     Indicates that a type is a scalar.
@@ -6,6 +6,4 @@
 ///     A vector contains between one and four scalar components; every
 ///     component of a vector must be of the same type.
 /// </summary>
-public interface IVector {
-    
-}
+public interface IVector<in T> { }
