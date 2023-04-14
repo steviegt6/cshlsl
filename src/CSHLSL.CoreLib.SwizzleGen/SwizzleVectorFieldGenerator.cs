@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
@@ -31,12 +32,12 @@ public sealed class SwizzleVectorFieldGenerator : ISourceGenerator {
             GenerateCombinations(validColors, colorSwizzles);
 
             foreach (var set in coordSwizzles)
-                sb.AppendLine($"    public Swizzle{i}<T> {set};");
+                sb.AppendLine($"    public Swizzle{set.Length}<T> {set};");
 
             sb.AppendLine();
 
             foreach (var set in colorSwizzles)
-                sb.AppendLine($"    public Swizzle{i}<T> {set};");
+                sb.AppendLine($"    public Swizzle{set.Length}<T> {set};");
 
             sb.AppendLine("}");
 
@@ -44,13 +45,28 @@ public sealed class SwizzleVectorFieldGenerator : ISourceGenerator {
         }
     }
 
-    private static void GenerateCombinations(char[] chars, HashSet<string> combinations, string prefix = "") {
-        if (prefix.Length == chars.Length) {
-            combinations.Add(prefix);
-            return;
-        }
+    private static void GenerateCombinations(char[] validChars, HashSet<string> combinations) {
+        var validLength = validChars.Length;
 
-        foreach (var c in chars)
-            GenerateCombinations(chars, combinations, prefix + c);
+        for (var length = 1; length <= validLength; length++) {
+            var combo = new char[length];
+            for (var i = 0; i < length; i++)
+                combo[i] = validChars[0];
+
+            while (true) {
+                combinations.Add(new string(combo));
+
+                var j = length - 1;
+                while (j >= 0 && combo[j] == validChars[validLength - 1])
+                    j--;
+
+                if (j < 0)
+                    break;
+                
+                combo[j] = validChars[Array.IndexOf(validChars, combo[j]) + 1];
+                for (var k = j + 1; k < length; k++)
+                    combo[k] = validChars[0];
+            }
+        }
     }
 }
