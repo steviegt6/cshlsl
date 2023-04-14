@@ -1,3 +1,6 @@
 ﻿namespace System;
 
-public struct Boolean { }
+/// <summary>
+///     <see langword="true"/> or <see langword="false"/>.
+/// </summary>
+public struct Boolean : IScalar { }
