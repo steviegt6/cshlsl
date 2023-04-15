@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSHLSL.CoreLib", "CSHLSL.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSHLSL.CoreLib.SwizzleGen", "CSHLSL.CoreLib.SwizzleGen\CSHLSL.CoreLib.SwizzleGen.csproj", "{6191E5A7-DC4F-47D6-8654-FD88423E1DD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSHLSL.TestShader", "CSHLSL.TestShader\CSHLSL.TestShader.csproj", "{ACAA5077-7C22-4668-A860-8030FF948A01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{6191E5A7-DC4F-47D6-8654-FD88423E1DD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6191E5A7-DC4F-47D6-8654-FD88423E1DD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6191E5A7-DC4F-47D6-8654-FD88423E1DD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACAA5077-7C22-4668-A860-8030FF948A01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACAA5077-7C22-4668-A860-8030FF948A01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACAA5077-7C22-4668-A860-8030FF948A01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACAA5077-7C22-4668-A860-8030FF948A01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

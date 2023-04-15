@@ -8,6 +8,7 @@
         <EnsureRuntimePackageDependencies>false</EnsureRuntimePackageDependencies>
         <TargetFramework>net7.0</TargetFramework>
         <Platform>AnyCPU</Platform>
+        <LangVersion>latest</LangVersion>
         <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
