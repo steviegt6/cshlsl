@@ -24,7 +24,7 @@ public sealed class MatrixGenerator : ISourceGenerator {
             sb.AppendLine("    public extern T this[int column] { get; set; }");
             
             for (var column = 0; column < matrix_column_count; column++)
-                sb.AppendLine($"    public T Row{column + 1};");
+                sb.AppendLine($"    public T Column{column + 1};");
             
             sb.AppendLine("}");
             
