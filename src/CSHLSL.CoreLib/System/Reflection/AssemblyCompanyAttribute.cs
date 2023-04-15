@@ -1,9 +1,9 @@
-﻿namespace System.Reflection; 
+﻿namespace System.Reflection;
 
 [AttributeUsage(AttributeTargets.Assembly, Inherited = false)]
 public sealed class AssemblyCompanyAttribute : Attribute {
-    public AssemblyCompanyAttribute(string company) { }
+    public AssemblyCompanyAttribute(object company) { }
 
     // ReSharper disable once UnassignedGetOnlyAutoProperty
-    public string Company { get; }
+    public object Company { get; }
 }

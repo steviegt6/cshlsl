@@ -2,8 +2,8 @@
 
 [AttributeUsage(AttributeTargets.Assembly, Inherited = false)]
 public sealed class AssemblyProductAttribute : Attribute {
-    public AssemblyProductAttribute(string product) { }
+    public AssemblyProductAttribute(object product) { }
 
     // ReSharper disable once UnassignedGetOnlyAutoProperty
-    public string Product { get; }
+    public object Product { get; }
 }

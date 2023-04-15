@@ -2,8 +2,8 @@
 
 [AttributeUsage(AttributeTargets.Assembly, Inherited = false)]
 public sealed class AssemblyTitleAttribute : Attribute {
-    public AssemblyTitleAttribute(string title) { }
+    public AssemblyTitleAttribute(object title) { }
 
     // ReSharper disable once UnassignedGetOnlyAutoProperty
-    public string Title { get; }
+    public object Title { get; }
 }

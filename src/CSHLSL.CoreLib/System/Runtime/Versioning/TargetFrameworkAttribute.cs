@@ -2,12 +2,12 @@
 
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
 public sealed class TargetFrameworkAttribute : Attribute {
-    public TargetFrameworkAttribute(string frameworkName) { }
+    public TargetFrameworkAttribute(object frameworkName) { }
 
 #pragma warning disable CA1822
-    public string FrameworkName => "";
+    public object FrameworkName => "";
 
-    public string FrameworkDisplayName {
+    public object FrameworkDisplayName {
         get => "";
         set => _ = value;
     }

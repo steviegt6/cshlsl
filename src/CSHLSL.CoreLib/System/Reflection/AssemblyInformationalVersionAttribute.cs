@@ -2,8 +2,8 @@
 
 [AttributeUsage(AttributeTargets.Assembly, Inherited = false)]
 public sealed class AssemblyInformationalVersionAttribute : Attribute {
-    public AssemblyInformationalVersionAttribute(string informationalVersion) { }
+    public AssemblyInformationalVersionAttribute(object informationalVersion) { }
 
     // ReSharper disable once UnassignedGetOnlyAutoProperty
-    public string InformationalVersion { get; }
+    public object InformationalVersion { get; }
 }
