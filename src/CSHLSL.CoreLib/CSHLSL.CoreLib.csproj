@@ -32,6 +32,8 @@
         <Compile Include="System\Boolean.cs" />
         <Compile Include="System\Double.cs" />
         <Compile Include="System\Enum.cs" />
+        <Compile Include="System\FlagsAttribute.cs" />
+        <Compile Include="System\ObsoleteAttribute.cs" />
         <Compile Include="System\Vector1.cs" />
         <Compile Include="System\Vector2.cs" />
         <Compile Include="System\Vector3.cs" />

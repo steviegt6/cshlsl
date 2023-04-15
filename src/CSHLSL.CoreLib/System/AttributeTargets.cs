@@ -1,5 +1,6 @@
 ﻿namespace System;
 
+[Flags]
 public enum AttributeTargets {
     Assembly         = 0b000000000000001,
     Module           = 0b000000000000010,
