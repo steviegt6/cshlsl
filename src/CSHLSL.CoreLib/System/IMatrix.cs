@@ -4,6 +4,8 @@
 ///     A matrix is a special data type that contains between one and sixteen
 ///     components. Every component of a matrix must be of the same type.
 /// </summary>
-public interface IMatrix<T> {
+public interface IMatrix<T, TRow> where TRow : IMatrixRow<T> {
     T this[int row, int column] { get; set; }
+    
+    TRow this[int row] { get; set; }
 }

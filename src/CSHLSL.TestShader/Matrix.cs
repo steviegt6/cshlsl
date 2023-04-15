@@ -1,6 +1,6 @@
 ﻿namespace CSHLSL.TestShader;
 
-public static class Matrix {
+public class Matrix {
     // https://gist.github.com/mattatz/86fff4b32d198d0928d0fa4ff32cf6fa
     public static float4x4 Inverse(float4x4 m) {
         float n11 = m[0, 0],
@@ -28,7 +28,7 @@ public static class Matrix {
         var det = n11 * t11 + n21 * t12 + n31 * t13 + n41 * t14;
         var idet = 1.0f / det;
 
-        float4x4 ret;
+        float4x4 ret = default;
 
         ret[0, 0] = t11 * idet;
         ret[0, 1] = (n24 * n33 * n41 - n23 * n34 * n41 - n24 * n31 * n43 + n21 * n34 * n43 + n23 * n31 * n44 - n21 * n33 * n44) * idet;

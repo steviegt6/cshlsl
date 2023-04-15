@@ -35,6 +35,7 @@
         <Compile Include="System\Enum.cs" />
         <Compile Include="System\FlagsAttribute.cs" />
         <Compile Include="System\IMatrix.cs" />
+        <Compile Include="System\IMatrixRow.cs" />
         <Compile Include="System\ObsoleteAttribute.cs" />
         <Compile Include="System\Vector1.cs" />
         <Compile Include="System\Vector2.cs" />
