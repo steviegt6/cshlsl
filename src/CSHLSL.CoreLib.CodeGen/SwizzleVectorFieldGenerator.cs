@@ -11,8 +11,8 @@ public sealed class SwizzleVectorFieldGenerator : ISourceGenerator {
     private const string namespace_name = "System";
     private const string vector_name = "Vector";
     private const int vector_count = 4;
-    private static readonly char[] coordinate_names = { 'x', 'y', 'z', 'w' };
-    private static readonly char[] color_names = { 'r', 'g', 'b', 'a' };
+    private static readonly char[] coordinate_names = { 'X', 'Y', 'Z', 'W' };
+    private static readonly char[] color_names = { 'R', 'G', 'B', 'A' };
 
     void ISourceGenerator.Initialize(GeneratorInitializationContext context) { }
 
