@@ -22,7 +22,7 @@ public sealed class SwizzleVectorFieldGenerator : ISourceGenerator {
 
             sb.AppendLine($"namespace {namespace_name};");
             sb.AppendLine();
-            sb.AppendLine($"partial class {vector_name}{i}<T> {{");
+            sb.AppendLine($"partial struct {vector_name}{i}<T> {{");
 
             var coordSwizzles = new HashSet<string>();
             var colorSwizzles = new HashSet<string>();

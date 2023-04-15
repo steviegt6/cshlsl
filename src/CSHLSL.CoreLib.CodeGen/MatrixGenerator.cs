@@ -20,7 +20,7 @@ public sealed class MatrixGenerator : ISourceGenerator {
 
             sb.AppendLine($"namespace {namespace_name};");
             sb.AppendLine();
-            sb.AppendLine($"public class {name}<T> {{");
+            sb.AppendLine($"public struct {name}<T> {{");
 
             sb.AppendLine("    public extern T this[int row, int column] { get; set; }");
 
