@@ -9,32 +9,26 @@ global using bool1 = System.Vector1<bool>;
 global using bool2 = System.Vector2<bool>;
 global using bool3 = System.Vector3<bool>;
 global using bool4 = System.Vector4<bool>;
-
 global using int1 = System.Vector1<int>;
 global using int2 = System.Vector2<int>;
 global using int3 = System.Vector3<int>;
 global using int4 = System.Vector4<int>;
-
 global using uint1 = System.Vector1<uint>;
 global using uint2 = System.Vector2<uint>;
 global using uint3 = System.Vector3<uint>;
 global using uint4 = System.Vector4<uint>;
-
 global using dword1 = System.Vector1<uint>;
 global using dword2 = System.Vector2<uint>;
 global using dword3 = System.Vector3<uint>;
 global using dword4 = System.Vector4<uint>;
-
 global using half1 = System.Vector1<System.Half>;
 global using half2 = System.Vector2<System.Half>;
 global using half3 = System.Vector3<System.Half>;
 global using half4 = System.Vector4<System.Half>;
-
 global using float1 = System.Vector1<float>;
 global using float2 = System.Vector2<float>;
 global using float3 = System.Vector3<float>;
 global using float4 = System.Vector4<float>;
-
 global using double1 = System.Vector1<double>;
 global using double2 = System.Vector2<double>;
 global using double3 = System.Vector3<double>;
@@ -57,7 +51,6 @@ global using bool4x1 = System.Matrix4x1<bool>;
 global using bool4x2 = System.Matrix4x2<bool>;
 global using bool4x3 = System.Matrix4x3<bool>;
 global using bool4x4 = System.Matrix4x4<bool>;
-
 global using int1x1 = System.Matrix1x1<int>;
 global using int1x2 = System.Matrix1x2<int>;
 global using int1x3 = System.Matrix1x3<int>;
@@ -74,7 +67,6 @@ global using int4x1 = System.Matrix4x1<int>;
 global using int4x2 = System.Matrix4x2<int>;
 global using int4x3 = System.Matrix4x3<int>;
 global using int4x4 = System.Matrix4x4<int>;
-
 global using uint1x1 = System.Matrix1x1<uint>;
 global using uint1x2 = System.Matrix1x2<uint>;
 global using uint1x3 = System.Matrix1x3<uint>;
@@ -91,7 +83,6 @@ global using uint4x1 = System.Matrix4x1<uint>;
 global using uint4x2 = System.Matrix4x2<uint>;
 global using uint4x3 = System.Matrix4x3<uint>;
 global using uint4x4 = System.Matrix4x4<uint>;
-
 global using dword1x1 = System.Matrix1x1<uint>;
 global using dword1x2 = System.Matrix1x2<uint>;
 global using dword1x3 = System.Matrix1x3<uint>;
@@ -108,7 +99,6 @@ global using dword4x1 = System.Matrix4x1<uint>;
 global using dword4x2 = System.Matrix4x2<uint>;
 global using dword4x3 = System.Matrix4x3<uint>;
 global using dword4x4 = System.Matrix4x4<uint>;
-
 global using half1x1 = System.Matrix1x1<System.Half>;
 global using half1x2 = System.Matrix1x2<System.Half>;
 global using half1x3 = System.Matrix1x3<System.Half>;
@@ -125,7 +115,6 @@ global using half4x1 = System.Matrix4x1<System.Half>;
 global using half4x2 = System.Matrix4x2<System.Half>;
 global using half4x3 = System.Matrix4x3<System.Half>;
 global using half4x4 = System.Matrix4x4<System.Half>;
-
 global using float1x1 = System.Matrix1x1<float>;
 global using float1x2 = System.Matrix1x2<float>;
 global using float1x3 = System.Matrix1x3<float>;
@@ -142,7 +131,6 @@ global using float4x1 = System.Matrix4x1<float>;
 global using float4x2 = System.Matrix4x2<float>;
 global using float4x3 = System.Matrix4x3<float>;
 global using float4x4 = System.Matrix4x4<float>;
-
 global using double1x1 = System.Matrix1x1<double>;
 global using double1x2 = System.Matrix1x2<double>;
 global using double1x3 = System.Matrix1x3<double>;

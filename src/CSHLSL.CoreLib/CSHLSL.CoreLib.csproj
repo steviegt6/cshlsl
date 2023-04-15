@@ -33,6 +33,7 @@
         <Compile Include="System\Boolean.cs" />
         <Compile Include="System\Double.cs" />
         <Compile Include="System\Enum.cs" />
+        <Compile Include="System\Exception.cs" />
         <Compile Include="System\FlagsAttribute.cs" />
         <Compile Include="System\IMatrix.cs" />
         <Compile Include="System\IMatrixRow.cs" />

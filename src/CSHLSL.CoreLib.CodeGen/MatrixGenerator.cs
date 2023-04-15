@@ -41,7 +41,7 @@ public sealed class MatrixGenerator : ISourceGenerator {
             sb.AppendLine();
             sb.AppendLine($"public struct {name}<T> : IMatrix<T, {rowName}> {{");
 
-            sb.AppendLine("    //public extern T this[int row, int column] { get; set; }");
+            sb.AppendLine("    public extern T this[int row, int column] { get; set; }");
             sb.AppendLine();
             sb.AppendLine($"    public extern ref {rowName} this[int row] {{ get; }}");
             sb.AppendLine();

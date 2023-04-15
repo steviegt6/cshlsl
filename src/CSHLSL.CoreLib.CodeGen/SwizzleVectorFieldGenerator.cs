@@ -62,7 +62,7 @@ public sealed class SwizzleVectorFieldGenerator : ISourceGenerator {
 
                 if (j < 0)
                     break;
-                
+
                 combo[j] = validChars[Array.IndexOf(validChars, combo[j]) + 1];
                 for (var k = j + 1; k < length; k++)
                     combo[k] = validChars[0];
