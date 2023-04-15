@@ -15,11 +15,6 @@
 )]
 internal sealed class ObsoleteAttribute : Attribute {
     public ObsoleteAttribute() { }
-    
-    // FIXME: These signatures do not match .NET; changed to objects instead of
-    // strings to avoid compilation errors since we have marked string as both
-    // obsolete and an error. Property types have also been modified. Not too
-    // important, ObsoleteAttribute is internal here (maybe another FIXME?).
 
     public ObsoleteAttribute(object message) {
         Message = message;
