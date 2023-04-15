@@ -1,7 +1,7 @@
 ﻿namespace System.Runtime.Versioning;
 
 [AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]
-internal sealed class TargetFrameworkAttribute : Attribute {
+public sealed class TargetFrameworkAttribute : Attribute {
     public TargetFrameworkAttribute(object frameworkName) { }
 
 #pragma warning disable CA1822
