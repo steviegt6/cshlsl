@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.CodeAnalysis;
 
-namespace CSHLSL.CoreLib.SwizzleGen;
+namespace CSHLSL.CoreLib.CodeGen;
 
 [Generator]
 public sealed class SwizzleVectorFieldGenerator : ISourceGenerator {
