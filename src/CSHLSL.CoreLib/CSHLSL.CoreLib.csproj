@@ -38,6 +38,7 @@
         <Compile Include="System\IMatrix.cs" />
         <Compile Include="System\IMatrixRow.cs" />
         <Compile Include="System\ObsoleteAttribute.cs" />
+        <Compile Include="System\Reflection\DefaultMemberAttribute.cs" />
         <Compile Include="System\Vector1.cs" />
         <Compile Include="System\Vector2.cs" />
         <Compile Include="System\Vector3.cs" />
