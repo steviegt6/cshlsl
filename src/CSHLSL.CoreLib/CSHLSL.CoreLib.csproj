@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
+        <AssemblyName>System.Runtime</AssemblyName>
         <IsPackable>false</IsPackable>
         <EnableDefaultItems>false</EnableDefaultItems>
         <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
@@ -33,6 +34,7 @@
         <Compile Include="System\Enum.cs" />
         <Compile Include="System\Exception.cs" />
         <Compile Include="System\FlagsAttribute.cs" />
+        <Compile Include="System\Math.cs" />
         <Compile Include="System\Matrices.cs" />
         <Compile Include="System\ObsoleteAttribute.cs" />
         <Compile Include="System\Reflection\DefaultMemberAttribute.cs" />
