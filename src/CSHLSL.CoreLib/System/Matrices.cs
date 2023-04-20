@@ -9,6 +9,8 @@
 /// </summary>
 public interface IMatrix { }
 
+public interface IMatrix<in T> : IMatrix { }
+
 public interface IMatrixRow<T> {
     public T this[int column] { get; set; }
 }

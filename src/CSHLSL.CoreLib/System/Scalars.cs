@@ -1,4 +1,6 @@
-﻿namespace System;
+﻿using System.Casting;
+
+namespace System;
 
 // TODO: Define minimum-precision scalar data types.
 // TODO: snorm/unorm scalar data types.
@@ -9,20 +11,22 @@
 /// </summary>
 public interface IScalar { }
 
+public interface IScalar<in T> { }
+
 /// <summary>
 ///     <see langword="true"/> or <see langword="false"/>.
 /// </summary>
-public struct Boolean : IScalar { }
+public struct Boolean : IScalar<bool>, IFloatCastable { }
 
 /// <summary>
 ///     32-bit signed integer.
 /// </summary>
-public struct Int32 : IScalar { }
+public struct Int32 : IScalar<int>, IFloatCastable { }
 
 /// <summary>
 ///     32-bit unsigned integer.
 /// </summary>
-public struct UInt32 : IScalar { }
+public struct UInt32 : IScalar<uint>, IFloatCastable { }
 
 /// <summary>
 ///     16-bit floating point value. This data type is provided only for
@@ -30,12 +34,12 @@ public struct UInt32 : IScalar { }
 ///     types to float data types. A half data type cannot be used on a uniform
 ///     global value.
 /// </summary>
-public struct Half : IScalar { }
+public struct Half : IScalar<Half>, IFloatCastable { }
 
 /// <summary>
 ///     32-bit floating point value.
 /// </summary>
-public struct Single : IScalar { }
+public struct Single : IScalar<float>, IFloatCastable { }
 
 // TODO: These docs describe functions for shader models past 3... yawn.
 /// <summary>
@@ -47,7 +51,7 @@ public struct Single : IScalar { }
 ///     asdouble function to unpack the pair of <see cref="uint"/>s back into
 ///     the <see cref="double"/>.
 /// </summary>
-public struct Double : IScalar { }
+public struct Double : IScalar<double>, IFloatCastable { }
 
 /// <summary>
 ///     In HLSL, a <see cref="string"/> is actually just an ASCII
@@ -55,4 +59,4 @@ public struct Double : IScalar { }
 ///     strings, but effects can query <see cref="string"/> parameters and
 ///     annotations.
 /// </summary>
-public sealed class String { }
+public sealed class String : IScalar<string> { }

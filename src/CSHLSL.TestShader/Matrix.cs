@@ -61,28 +61,28 @@ public static class Matrix {
         var q = new float4(0, 0, 0, 0);
 
         if (tr > 0) {
-            var s = Math.SqrtScalar(tr + 1.0f) * 2; // S=4*qw 
+            var s = Sqrt(tr + 1.0f) * 2; // S=4*qw 
             q.W = 0.25f * s;
             q.X = (m[2][1] - m[1][2]) / s;
             q.Y = (m[0][2] - m[2][0]) / s;
             q.Z = (m[1][0] - m[0][1]) / s;
         }
         else if ((m[0][0] > m[1][1]) && (m[0][0] > m[2][2])) {
-            var s = Math.SqrtScalar(1.0f + m[0][0] - m[1][1] - m[2][2]) * 2; // S=4*qx 
+            var s = Sqrt(1.0f + m[0][0] - m[1][1] - m[2][2]) * 2; // S=4*qx 
             q.W = (m[2][1] - m[1][2]) / s;
             q.X = 0.25f * s;
             q.Y = (m[0][1] + m[1][0]) / s;
             q.Z = (m[0][2] + m[2][0]) / s;
         }
         else if (m[1][1] > m[2][2]) {
-            var s = Math.SqrtScalar(1.0f + m[1][1] - m[0][0] - m[2][2]) * 2; // S=4*qy
+            var s = Sqrt(1.0f + m[1][1] - m[0][0] - m[2][2]) * 2; // S=4*qy
             q.W = (m[0][2] - m[2][0]) / s;
             q.X = (m[0][1] + m[1][0]) / s;
             q.Y = 0.25f * s;
             q.Z = (m[1][2] + m[2][1]) / s;
         }
         else {
-            var s = Math.SqrtScalar(1.0f + m[2][2] - m[0][0] - m[1][1]) * 2; // S=4*qz
+            var s = Sqrt(1.0f + m[2][2] - m[0][0] - m[1][1]) * 2; // S=4*qz
             q.W = (m[1][0] - m[0][1]) / s;
             q.X = (m[0][2] + m[2][0]) / s;
             q.Y = (m[1][2] + m[2][1]) / s;
@@ -162,7 +162,7 @@ public static class Matrix {
         m[2][3] = z;
         return m;
     }
-    
+
     // https://gist.github.com/mattatz/86fff4b32d198d0928d0fa4ff32cf6fa#file-matrix-hlsl-L135
     public static float4x4 Compose(float3 position, float4 quat, float3 scale) {
         var m = QuaternionToMatrix(quat);
@@ -170,15 +170,18 @@ public static class Matrix {
         m = MTranslate(m, position);
         return m;
     }
-    
+
     // https://gist.github.com/mattatz/86fff4b32d198d0928d0fa4ff32cf6fa#file-matrix-hlsl-L143
     public static void Decompose(in float4x4 m, out float3 position, out float4 rotation, out float3 scale) {
-        float sx = length(new float3(m[0][0], m[0][1], m[0][2]));
-        float sy = length(new float3(m[1][0], m[1][1], m[1][2]));
-        float sz = length(new float3(m[2][0], m[2][1], m[2][2]));
+        position = default;
+        scale = default;
+
+        var sx = Length(new float3(m[0][0], m[0][1], m[0][2]));
+        var sy = Length(new float3(m[1][0], m[1][1], m[1][2]));
+        var sz = Length(new float3(m[2][0], m[2][1], m[2][2]));
 
         // if determine is negative, we need to invert one scale
-        var det = Math.Determinant(m);
+        var det = Determinant(m);
         if (det < 0)
             sx = -sx;
 

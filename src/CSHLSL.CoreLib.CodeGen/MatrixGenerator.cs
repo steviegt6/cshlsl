@@ -44,7 +44,7 @@ public sealed class MatrixGenerator : ISourceGenerator {
 
             sb.AppendLine($"namespace {namespace_name};");
             sb.AppendLine();
-            sb.AppendLine($"public struct {name}<T> : IMatrix {{");
+            sb.AppendLine($"public struct {name}<T> : IMatrix<T> {{");
 
             sb.AppendLine("    public extern T this[int row, int column] { get; set; }");
             sb.AppendLine();
