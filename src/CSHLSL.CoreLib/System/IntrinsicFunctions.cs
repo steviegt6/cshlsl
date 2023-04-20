@@ -34,14 +34,48 @@ public static class IntrinsicFunctions {
 #endregion
 
 #region Determinant
-    // TODO: Compile-time error checking for non-square matrices? Please?
+    /*/// <summary>
+    ///     Returns the determinant of the specified floating-point, square
+    ///     matrix.
+    /// </summary>
+    /// <param name="m">The specified value.</param>
+    [HlslMinimumVersion(1, 1)]
+    public static extern float Determinant<T>(IMatrix<T> m) where T : IFloatCastable;*/
+
+    // Not the cleanest possible solution, but here's reliable compile-time
+    // checking for square-only matrices.
+
     /// <summary>
     ///     Returns the determinant of the specified floating-point, square
     ///     matrix.
     /// </summary>
     /// <param name="m">The specified value.</param>
     [HlslMinimumVersion(1, 1)]
-    public static extern float Determinant<T>(IMatrix<T> m) where T : IFloatCastable;
+    public static extern float Determinant<T>(Matrix1x1<T> m) where T : IFloatCastable;
+
+    /// <summary>
+    ///     Returns the determinant of the specified floating-point, square
+    ///     matrix.
+    /// </summary>
+    /// <param name="m">The specified value.</param>
+    [HlslMinimumVersion(1, 1)]
+    public static extern float Determinant<T>(Matrix2x2<T> m) where T : IFloatCastable;
+
+    /// <summary>
+    ///     Returns the determinant of the specified floating-point, square
+    ///     matrix.
+    /// </summary>
+    /// <param name="m">The specified value.</param>
+    [HlslMinimumVersion(1, 1)]
+    public static extern float Determinant<T>(Matrix3x3<T> m) where T : IFloatCastable;
+
+    /// <summary>
+    ///     Returns the determinant of the specified floating-point, square
+    ///     matrix.
+    /// </summary>
+    /// <param name="m">The specified value.</param>
+    [HlslMinimumVersion(1, 1)]
+    public static extern float Determinant<T>(Matrix4x4<T> m) where T : IFloatCastable;
 #endregion
 
 #region Length
