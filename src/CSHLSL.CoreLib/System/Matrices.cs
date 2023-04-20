@@ -1,4 +1,7 @@
-﻿namespace System; 
+﻿namespace System;
+
+// MatrixRxC classes are entirely generated with a source generator, not
+// explicitly defined.
 
 /// <summary>
 ///     A matrix is a special data type that contains between one and sixteen
@@ -8,4 +11,8 @@ public interface IMatrix<T, TRow> where TRow : IMatrixRow<T> {
     T this[int row, int column] { get; set; }
 
     ref TRow this[int row] { get; }
+}
+
+public interface IMatrixRow<T> {
+    public T this[int column] { get; set; }
 }
