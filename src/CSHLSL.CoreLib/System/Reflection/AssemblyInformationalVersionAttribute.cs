@@ -2,5 +2,5 @@
 
 [AttributeUsage(AttributeTargets.Assembly, Inherited = false)]
 public sealed class AssemblyInformationalVersionAttribute : Attribute {
-    public AssemblyInformationalVersionAttribute(object informationalVersion) { }
+    public AssemblyInformationalVersionAttribute(string informationalVersion) { }
 }

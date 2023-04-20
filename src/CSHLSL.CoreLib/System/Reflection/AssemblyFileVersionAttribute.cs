@@ -2,5 +2,5 @@
 
 [AttributeUsage(AttributeTargets.Assembly, Inherited = false)]
 public sealed class AssemblyFileVersionAttribute : Attribute {
-    public AssemblyFileVersionAttribute(object version) { }
+    public AssemblyFileVersionAttribute(string version) { }
 }
