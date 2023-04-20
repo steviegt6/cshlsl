@@ -49,4 +49,10 @@ public struct Single : IScalar { }
 /// </summary>
 public struct Double : IScalar { }
 
+/// <summary>
+///     In HLSL, a <see cref="string"/> is actually just an ASCII
+///     <see cref="string"/>. There are no operations or states that accept
+///     strings, but effects can query <see cref="string"/> parameters and
+///     annotations.
+/// </summary>
 public sealed class String { }
