@@ -31,9 +31,11 @@
         <Compile Include="System\Attribute.cs" />
         <Compile Include="System\AttributeTargets.cs" />
         <Compile Include="System\AttributeUsageAttribute.cs" />
+        <Compile Include="System\Compatibility\HlslMinimumVersionAttribute.cs" />
         <Compile Include="System\Enum.cs" />
         <Compile Include="System\Exception.cs" />
         <Compile Include="System\FlagsAttribute.cs" />
+        <Compile Include="System\IntrinsicFunctions.cs" />
         <Compile Include="System\Math.cs" />
         <Compile Include="System\Matrices.cs" />
         <Compile Include="System\ObsoleteAttribute.cs" />

@@ -1,5 +1,8 @@
 ﻿#pragma warning disable CS8981
 
+// Intrinsic functions.
+global using static System.IntrinsicFunctions;
+
 // Scalar aliases.
 global using dword = System.UInt32;
 global using half = System.Half;

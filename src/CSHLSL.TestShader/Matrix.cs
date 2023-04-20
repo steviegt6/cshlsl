@@ -151,4 +151,63 @@ public static class Matrix {
 
         return m;
     }
+
+    // https://gist.github.com/mattatz/86fff4b32d198d0928d0fa4ff32cf6fa#file-matrix-hlsl-L126
+    public static float4x4 MTranslate(float4x4 m, float3 v) {
+        float x = v.X,
+              y = v.Y,
+              z = v.Z;
+        m[0][3] = x;
+        m[1][3] = y;
+        m[2][3] = z;
+        return m;
+    }
+    
+    // https://gist.github.com/mattatz/86fff4b32d198d0928d0fa4ff32cf6fa#file-matrix-hlsl-L135
+    public static float4x4 Compose(float3 position, float4 quat, float3 scale) {
+        var m = QuaternionToMatrix(quat);
+        m = MScale(m, scale);
+        m = MTranslate(m, position);
+        return m;
+    }
+    
+    // https://gist.github.com/mattatz/86fff4b32d198d0928d0fa4ff32cf6fa#file-matrix-hlsl-L143
+    public static void Decompose(in float4x4 m, out float3 position, out float4 rotation, out float3 scale) {
+        float sx = length(new float3(m[0][0], m[0][1], m[0][2]));
+        float sy = length(new float3(m[1][0], m[1][1], m[1][2]));
+        float sz = length(new float3(m[2][0], m[2][1], m[2][2]));
+
+        // if determine is negative, we need to invert one scale
+        var det = Math.Determinant(m);
+        if (det < 0)
+            sx = -sx;
+
+        position.X = m[3][0];
+        position.Y = m[3][1];
+        position.Z = m[3][2];
+
+        // scale the rotation part
+
+        var invSX = 1.0f / sx;
+        var invSY = 1.0f / sy;
+        var invSZ = 1.0f / sz;
+
+        m[0][0] *= invSX;
+        m[0][1] *= invSX;
+        m[0][2] *= invSX;
+
+        m[1][0] *= invSY;
+        m[1][1] *= invSY;
+        m[1][2] *= invSY;
+
+        m[2][0] *= invSZ;
+        m[2][1] *= invSZ;
+        m[2][2] *= invSZ;
+
+        rotation = MatrixToQuaternion(m);
+
+        scale.X = sx;
+        scale.Y = sy;
+        scale.Z = sz;
+    }
 }
