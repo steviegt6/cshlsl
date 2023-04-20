@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace CSHLSL.TestShader;
+﻿namespace CSHLSL.TestShader;
 
 public static class Matrix {
     // https://gist.github.com/mattatz/86fff4b32d198d0928d0fa4ff32cf6fa#file-matrix-hlsl-L6
