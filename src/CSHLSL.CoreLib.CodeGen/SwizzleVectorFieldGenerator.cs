@@ -48,7 +48,7 @@ public sealed class SwizzleVectorFieldGenerator : ISourceGenerator {
     private static void GenerateCombinations(char[] validChars, HashSet<string> combinations) {
         var validLength = validChars.Length;
 
-        for (var length = 1; length <= validLength; length++) {
+        for (var length = 1; length <= 4; length++) {
             var combo = new char[length];
             for (var i = 0; i < length; i++)
                 combo[i] = validChars[0];
